@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertask1/model/colormodel.dart';
-import 'package:fluttertask1/model/textmodel.dart';
+import 'package:fluttertask1/model/lettermodel.dart';
 import 'package:fluttertask1/widget/customcontainer.dart';
 
 class Home extends StatelessWidget {
@@ -14,11 +13,12 @@ class Home extends StatelessWidget {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 4,
           ),
-          itemCount: items.length,
+          itemCount: letters.length,
           itemBuilder: (BuildContext context, int index) {
+            final LetterModel = letters[index];
             return CustomContainer(
-              color: colors[index],
-              letter: items[index],
+              color: LetterModel.color,
+              letter: LetterModel.letter,
             );
           },
         ),
