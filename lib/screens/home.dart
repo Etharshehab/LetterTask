@@ -15,10 +15,9 @@ class Home extends StatelessWidget {
           ),
           itemCount: letters.length,
           itemBuilder: (BuildContext context, int index) {
-            final LetterModel = letters[index];
+            final lettermodel = letters[index];
             return CustomContainer(
-              color: LetterModel.color,
-              letter: LetterModel.letter,
+              l: lettermodel,
             );
           },
         ),
